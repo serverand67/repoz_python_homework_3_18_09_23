@@ -23,12 +23,14 @@
 import re
 from collections import Counter
 
-def most_common_words(text, n=10):
+COUNR_10_WORD = 10
+
+def most_common_words(text):
     text = text.lower()
     text = re.sub(r'[^\w\s]', '', text)
     words = text.split()
     word_count = Counter(words)
-    most_common_words = word_count.most_common(10)
+    most_common_words = word_count.most_common(COUNR_10_WORD)
 
     return most_common_words
 
