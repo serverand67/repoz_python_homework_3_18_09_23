@@ -12,8 +12,7 @@ new_list = []
 for i in list_num:
     if list_num.count(i) > 1:
         new_list += [i]
-    else:
-        continue
 
-print(set(new_list))
+result = list(set(new_list))
+print(result)
 
